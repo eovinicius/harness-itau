@@ -18,5 +18,5 @@ Objetivo: **causa provável com evidência**, não um palpite. Não corrija nada
    - Log ausente no Datadog: confira o CloudWatch Logs do serviço (papel do CloudWatch ainda não definido — `.claude/rules/observability.md`).
 4. **Downstream** (se a suspeita for a API externa): no span `http.request`, veja rota, status e duração; reproduza a resposta problemática com um stub WireMock.Net num teste de integração.
 5. **Hipóteses** ordenadas por evidência; descarte explicitamente as refutadas e diga como as refutou.
-6. **Registre** em `docs/00-Inbox/AAAA-MM-DD-investigacao-<slug>.md`: sintoma, passos de reprodução, evidências (consultas usadas), causa provável e próximos passos. Causa de design ⇒ sugerir spec ou ADR; procedimento recorrente ⇒ sugerir runbook (`docs/99-Templates/TPL-Runbook.md`).
+6. **Registre** em `docs/00-Inbox/AAAA-MM-DD-investigacao-<slug>.md`: sintoma, passos de reprodução, evidências (consultas usadas), causa provável e próximos passos. Causa de design ⇒ sugerir spec; procedimento recorrente ⇒ sugerir runbook (`docs/99-Templates/TPL-Runbook.md`).
 7. Proponha a correção (teste vermelho → fix) e aguarde o usuário decidir se segue.

@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# PreToolUse(Edit|Write|NotebookEdit) — protege segredos, dados locais e ADRs aceitos.
+# PreToolUse(Edit|Write|NotebookEdit) — protege segredos e dados locais.
 source "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 
 while IFS= read -r raw; do
   [[ -z "$raw" ]] && continue
   rel="$(relpath "$raw")"
-  base="$(basename "$rel")"
 
   # Segredos, certificados e estado local
   case "$rel" in
@@ -15,11 +14,6 @@ while IFS= read -r raw; do
     .git/*|*/.git/*) block "Edição direta em .git é proibida." ;;
     .containers/*) block "'.containers/' guarda os dados locais dos containers do compose — não é editável por agentes." ;;
   esac
-
-  # ADR aceita é imutável — só status/superseded_by, com confirmação humana
-  if [[ "$rel" == docs/04-ADRs/ADR-*.md && -f "$HOOK_PROJECT_DIR/$rel" ]] && grep -qE '^status: *Accepted' "$HOOK_PROJECT_DIR/$rel"; then
-    ask_user "A ADR '$base' está Accepted (imutável). Só altere status/superseded_by ao substituí-la por uma nova ADR. Confirmar a edição?"
-  fi
 done < <(touched_paths | sort -u)
 
 exit 0

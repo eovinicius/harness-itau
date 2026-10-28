@@ -86,7 +86,7 @@ Each section names the rule that owns the convention; open it when an item needs
 
 ### C# — `.claude/rules/csharp.md`
 - Async end to end: the received `CancellationToken` reaches the last call (not `CancellationToken.None`/`default`); no `.Result`/`.Wait()`/`async void`.
-- Package versions only in `Directory.Packages.props`; a new package is justified (ADR if structural); no LLM/AI package anywhere.
+- Package versions only in `Directory.Packages.props`; a new package is justified; no LLM/AI package anywhere.
 
 ### Observability & personal data — `.claude/rules/observability.md`, `.claude/rules/security.md`
 - Structured log templates; no personal data (names, e-mails, user-provided free text such as a todo description), tokens, or connection strings in logs, traces, metric tags, or error messages.
@@ -102,7 +102,7 @@ Each section names the rule that owns the convention; open it when an item needs
 - Validator: `TestValidate` per rule. Endpoint: integration test over real HTTP with the downstream faked by WireMock.Net. Naming and Arrange/Act/Assert match the neighbors.
 
 ### Specs & vault — `.claude/rules/specs.md`, `.claude/rules/docs-vault.md`
-- New dependency/pattern/technology → ADR; new or renamed signal → `docs/03-Architecture/Observability.md`; new domain term → `docs/01-Product/Glossary.md`.
+- New or renamed signal → `docs/03-Architecture/Observability.md`; new domain term → `docs/01-Product/Glossary.md`.
 
 ## 5. Report
 

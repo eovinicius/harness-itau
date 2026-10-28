@@ -10,12 +10,12 @@ Entrada: `SPEC-NNNN`. Pré-condição: `status: Approved` (ou `In Progress`). Se
 
 ## 1. Contexto (progressivo)
 
-- A spec inteira e os ADRs listados em `adrs:`.
+- A spec inteira.
 - Do código, **somente** o que a spec toca: a entidade em `app/src/Domain/{Feature}/`, um slice análogo em `app/src/Application/{Feature}/` e a action espelho no controller `app/src/Api/Controllers/{Feature}Controller.cs`. As rules certas carregam sozinhas pelos caminhos.
 
 ## 2. Plano (antes de editar)
 
-Mostre ao usuário uma tabela **AC → camada/arquivos → teste que prova**. Aguarde confirmação se houver: mudança breaking em endpoint existente, mudança no contrato com o downstream, pacote novo ou decisão estrutural (esta pede ADR → skill `create-adr`).
+Mostre ao usuário uma tabela **AC → camada/arquivos → teste que prova**. Aguarde confirmação se houver: mudança breaking em endpoint existente, mudança no contrato com o downstream, pacote novo ou decisão estrutural.
 Mude a spec para `status: In Progress` e atualize `updated:`.
 
 ## 3. Executar em fatias (uma AC por vez quando possível)

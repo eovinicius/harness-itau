@@ -12,11 +12,11 @@ O Dependabot (`.github/dependabot.yml`) já abre PRs diários agrupados. Esta sk
    - `dotnet list CleanArchitecture.slnx package --outdated`
    - `dotnet list CleanArchitecture.slnx package --vulnerable --include-transitive`
 2. **Versão real** de cada candidato via MCP `nuget` (ou nuget.org). Nunca chute versões. Release notes e breaking changes via `context7`/`microsoft-learn`.
-3. **Classifique**: patch (aplicar) · minor (aplicar + ler changelog) · major (plano para o usuário + possível ADR). Pacotes de IA/LLM são proibidos.
+3. **Classifique**: patch (aplicar) · minor (aplicar + ler changelog) · major (plano para o usuário). Pacotes de IA/LLM são proibidos.
 4. **Atualize famílias juntas**, sempre em `Directory.Packages.props` (nunca `Version` no `.csproj`):
    - ASP.NET Core 10: `Microsoft.AspNetCore.*` + `Microsoft.Extensions.*` alinhados.
    - OpenTelemetry: `OpenTelemetry.*`.
    - Testes: `xunit*`, `Microsoft.NET.Test.Sdk`, `coverlet.collector`.
 5. **Valide**: `dotnet restore` → `dotnet build CleanArchitecture.slnx` (o SonarAnalyzer novo pode trazer warnings = erros; corrija ou justifique) → `dotnet test CleanArchitecture.slnx`.
 6. **Commit** (só se pedido), um por família: `chore(deps): atualiza OpenTelemetry para 1.x.y`.
-7. Major, mudança de licença ou troca de biblioteca ⇒ registre no PR e, se estrutural, faça um ADR (skill `create-adr`).
+7. Major, mudança de licença ou troca de biblioteca ⇒ registre no PR.

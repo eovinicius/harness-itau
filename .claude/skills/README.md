@@ -19,7 +19,6 @@ Procedures that teach Claude Code this repository's conventions: vertical-slice 
 |---|---|---|
 | **write-spec** | `/write-spec arquivar tarefas concluídas` | Writes/evolves a spec in the Obsidian vault (`docs/02-Specs`) with testable acceptance criteria; reviewed by the `spec-reviewer` subagent. |
 | **implement-spec** | `/implement-spec SPEC-0001` | Implements an `Approved` spec AC by AC (red test → domain → slice → endpoint → repository), then verifies and closes the spec. |
-| **create-adr** | `/create-adr adopt X for Y` | Records an architecture decision in `docs/04-ADRs` (alternatives, consequences, how to verify). |
 | **create-rule** | `/create-rule feature flags nos controllers` | Creates or evolves a rule in `.claude/rules/` with a single owner per convention, the right load scope (`paths:`), and verifiable bullets. |
 | **dependency-upgrade** | `/dependency-upgrade OpenTelemetry` | Safe NuGet upgrades through Central Package Management, with real versions from the `nuget` MCP. |
 | **instrument-observability** | `/instrument-observability todos completed per priority` | Adds metrics/spans/logs following the Serilog + dd-trace-dotnet setup exported to Datadog. |
