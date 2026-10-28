@@ -11,8 +11,8 @@
   - `SessionStart`: injeta estado do repo.
   - `UserPromptSubmit`: bloqueia segredos; resolve `SPEC-/RB-` citados.
   - `PreToolUse`: protege shell e arquivos.
-  - `PostToolUse`: formata `.cs`; valida notas do vault.
-  - `Stop`: exige build + testes unitários se código .NET mudou (opt-out pontual: `HARNESS_SKIP_STOP_VERIFY=1`).
+  - `PostToolUse`: enfileira `.cs` editados para formatação; valida notas do vault.
+  - `Stop`: formata os `.cs` da fila (whitespace + style); exige build + testes unitários se código .NET mudou (opt-out pontual: `HARNESS_SKIP_STOP_VERIFY=1`).
 - **MCP por dev**: `obsidian`, `github` (exigem chave ou ferramenta local) via `claude mcp add --scope local` — comandos em `docs/05-Engineering/Agent-Harness.md`.
 - **Compactação**: preserve SPEC em andamento, ACs pendentes, arquivos alterados, decisões tomadas e verificações ainda não executadas.
 - **Local** (gitignored): `CLAUDE.local.md` e `.claude/settings.local.json`.
