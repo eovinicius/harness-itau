@@ -14,6 +14,6 @@
   - **Verde** ⇒ preencha a descrição do PR que a pipeline criou (`gh pr edit <n> --body-file <arquivo>`), com o conteúdo do item "PR descreve" abaixo.
   - **Vermelho** ⇒ não preencha a descrição; diagnostique, corrija na mesma branch e acompanhe de novo.
 - Proibido: `--no-verify`, `git reset --hard`, `git clean -f` pelo agente (o usuário executa manualmente se quiser).
-- Commit **só quando o usuário pedir**. Conventional Commits com descrição em pt-BR, como no histórico: `feat(todos): adiciona arquivamento de tarefas (SPEC-0001)`. Referencie SPEC/ADR quando houver.
+- **Mensagem de commit** (quando e idioma: core #9 e #10): `feat(todos): adiciona arquivamento de tarefas (SPEC-0001)`. Referencie SPEC/ADR quando houver.
 - PR descreve: spec/ADR relacionados, mudança de contrato HTTP (sim/não; breaking?), como foi testado (comandos + resultado), riscos e rollback.
-- Não commite artefatos: `bin/`, `obj/`, `.containers/`, `TestResults/`, `.claude/logs/`, `.claude/settings.local.json`.
+- Não commite artefatos: `bin/`, `obj/`, `.containers/`, `TestResults/`, `.claude/settings.local.json`.

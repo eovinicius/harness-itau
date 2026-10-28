@@ -19,7 +19,7 @@ Escopo: o PR informado; senão o PR da branch atual (`gh pr view --json number,u
 
 - PR: `gh pr checks <n> --watch --interval 20` (timeout do Bash: 600000 ms). Sem PR: `gh run watch <run-id> --exit-status`.
 - Ainda rodando após o timeout? Reporte "em andamento" com o link e pare — não faça polling em loop.
-- Nenhum check encontrado? Confira os gatilhos em `.github/workflows/build.yml` (`pull_request`, push em `main`, `workflow_dispatch`) e diga por que não rodou.
+- Nenhum check encontrado? Confira os gatilhos em `.github/workflows/build.yml` (push em `feature/*`, `pull_request`, `workflow_dispatch`) e diga por que não rodou.
 
 ## 2. Verde
 
