@@ -90,7 +90,7 @@ Each section names the rule that owns the convention; open it when an item needs
 
 ### Observability & personal data — `.claude/rules/observability.md`, `.claude/rules/security.md`
 - Structured log templates; no personal data (names, e-mails, user-provided free text such as a todo description), tokens, or connection strings in logs, traces, metric tags, or error messages.
-- Metrics named `app.<context>.<measure>` with low-cardinality tags, registered with `.AddMeter(...)`/`.AddSource(...)` in `Api/Extensions/OpenTelemetryExtensions.cs`.
+- Metrics named `app.<context>.<measure>` with low-cardinality tags; no parallel OpenTelemetry exporter next to `dd-trace-dotnet` (see `.claude/rules/observability.md`).
 
 ### Persistence — `.claude/rules/persistence.md`
 - Repository/service methods return `Result`/`Result<T>`; downstream 404 → `{Entity}Errors.NotFound`, failure/timeout → the catalog's `Failure` error; downstream body, raw status, or message never reach the caller.

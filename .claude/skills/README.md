@@ -22,8 +22,8 @@ Procedures that teach Claude Code this repository's conventions: vertical-slice 
 | **create-adr** | `/create-adr adopt X for Y` | Records an architecture decision in `docs/04-ADRs` (alternatives, consequences, how to verify). |
 | **create-rule** | `/create-rule feature flags nos controllers` | Creates or evolves a rule in `.claude/rules/` with a single owner per convention, the right load scope (`paths:`), and verifiable bullets. |
 | **dependency-upgrade** | `/dependency-upgrade OpenTelemetry` | Safe NuGet upgrades through Central Package Management, with real versions from the `nuget` MCP. |
-| **instrument-observability** | `/instrument-observability todos completed per priority` | Adds metrics/spans/logs following the OpenTelemetry + Serilog setup exported to the local Grafana LGTM. |
-| **investigate-issue** | `/investigate-issue 500 on POST /todos` | Reproduces locally and correlates Loki/Tempo/Prometheus evidence until a probable cause is found. |
+| **instrument-observability** | `/instrument-observability todos completed per priority` | Adds metrics/spans/logs following the Serilog + dd-trace-dotnet setup exported to Datadog. |
+| **investigate-issue** | `/investigate-issue 500 on POST /todos` | Reproduces locally and correlates Datadog evidence (Logs, APM) until a probable cause is found. |
 
 The rest of the harness (rules, subagents, hooks, MCP) is documented in `docs/05-Engineering/Agent-Harness.md`.
 
