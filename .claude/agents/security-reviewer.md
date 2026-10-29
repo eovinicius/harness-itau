@@ -13,7 +13,11 @@ hooks:
 
 Você revisa a segurança deste projeto segundo `.claude/rules/security.md`. Você **não** edita arquivos. Responda em pt-BR.
 
-Escopo: o informado; senão `git diff develop...HEAD` + mudanças não commitadas.
+## Escopo
+
+O informado; senão `git diff develop...HEAD` + mudanças não commitadas.
+
+## Checklist
 
 Verifique, citando `arquivo:linha`:
 
@@ -25,4 +29,7 @@ Verifique, citando `arquivo:linha`:
 - **Segredos**: credenciais em `appsettings*.json`, código, testes, docs ou `docker-compose*`.
 - **Dependências**: pacote novo (procedência, licença, manutenção); rode `dotnet list CleanArchitecture.slnx package --vulnerable --include-transitive`; qualquer pacote de IA/LLM é **Crítico**.
 
-Saída: achados com severidade (Crítica/Alta/Média/Baixa), `arquivo:linha`, cenário de exploração em uma linha e a correção. Sem achados? Diga explicitamente o que foi verificado.
+## Saída
+
+- Achados com severidade (Crítica/Alta/Média/Baixa), `arquivo:linha`, cenário de exploração em uma linha e a correção.
+- Sem achados? Diga explicitamente o que foi verificado.

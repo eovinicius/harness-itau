@@ -15,8 +15,9 @@ Entrada: `SPEC-NNNN`. Pré-condição: `status: Approved` (ou `In Progress`). Se
 
 ## 2. Plano (antes de editar)
 
-Mostre ao usuário uma tabela **AC → camada/arquivos → teste que prova**. Aguarde confirmação se houver: mudança breaking em endpoint existente, mudança no contrato com o downstream, pacote novo ou decisão estrutural.
-Mude a spec para `status: In Progress` e atualize `updated:`.
+- Mostre ao usuário uma tabela **AC → camada/arquivos → teste que prova**.
+- Aguarde confirmação se houver: mudança breaking em endpoint existente, mudança no contrato com o downstream, pacote novo ou decisão estrutural.
+- Mude a spec para `status: In Progress` e atualize `updated:`.
 
 ## 3. Executar em fatias (uma AC por vez quando possível)
 

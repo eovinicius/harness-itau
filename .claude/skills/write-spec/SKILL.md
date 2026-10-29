@@ -27,4 +27,8 @@ Transforma um pedido em uma spec **revisável**, que humanos e agentes usam como
 
 ## Evoluir uma spec existente
 
-Leia a spec inteira; mantenha a numeração existente (não renumere `RN`/`AC`: os testes citam esses IDs). Critério removido vira ~~riscado~~ com motivo; critério novo recebe o próximo número. Atualize `updated:`.
+- Leia a spec inteira.
+- Mantenha a numeração existente (não renumere `RN`/`AC`: os testes citam esses IDs).
+- Critério removido vira ~~riscado~~ com motivo; critério novo recebe o próximo número.
+- Atualize `updated:`.
+
